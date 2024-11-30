@@ -16,7 +16,9 @@ public enum ErrorType {
     ARITHMETIC_ERROR("Arithmetic operation error"),
     INDEX_OUT_OF_BOUNDS("Index out of bounds"),
     THREAD_INTERRUPTED("Thread was interrupted"),
-    UNKNOWN_ERROR("An unknown error occurred");
+    UNKNOWN_ERROR("An unknown error occurred"),
+    DUPLICATE_VALUE("Duplicated value");
+    
     private final String description;
 
     ErrorType(String description) {
