@@ -1,21 +1,29 @@
 package ru.vsu.cs.leguenko_e_yu.disease;
 
+import ru.vsu.cs.leguenko_e_yu.date.LocalDateHelpers;
 import ru.vsu.cs.leguenko_e_yu.drug.Drug;
 
+import java.time.Period;
 import java.util.List;
 import java.util.Objects;
 
 public class Disease {
     private Integer id;
     private Double degree;
-    private Integer duration;
+    private String startDate;
     private List<Drug> treatment;
 
-    public Disease(Integer id, Double degree, Integer duration, List<Drug> treatment) {
+    public Disease(Integer id, Double degree, String startDate, List<Drug> treatment) {
         this.id = id;
         this.degree = degree;
-        this.duration = duration;
+        this.startDate = startDate;
         this.treatment = treatment;
+    }
+
+    public Disease(Integer id, Double degree, String startDate) {
+        this.id = id;
+        this.degree = degree;
+        this.startDate = startDate;
     }
 
     public Integer getId() {
@@ -34,12 +42,12 @@ public class Disease {
         this.degree = degree;
     }
 
-    public Integer getDuration() {
-        return duration;
+    public String getStartDate() {
+        return startDate;
     }
 
-    public void setDuration(Integer duration) {
-        this.duration = duration;
+    public void setStartDate(String startDate) {
+        this.startDate = startDate;
     }
 
     public List<Drug> getTreatment() {
@@ -50,12 +58,16 @@ public class Disease {
         this.treatment = treatment;
     }
 
+    public Integer duration() {
+        return Period.between(LocalDateHelpers.parseFormat(startDate), LocalDateHelpers.getCurrentDate()).getDays();
+    }
+
     @Override
     public String toString() {
         return "Disease{" +
                 "id=" + id +
                 ", degree=" + degree +
-                ", duration=" + duration +
+                ", startDate=" + startDate +
                 ", treatment=" + treatment +
                 '}';
     }
@@ -64,11 +76,11 @@ public class Disease {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Disease disease)) return false;
-        return Objects.equals(id, disease.id) && Objects.equals(degree, disease.degree) && Objects.equals(duration, disease.duration) && Objects.equals(treatment, disease.treatment);
+        return Objects.equals(id, disease.id) && Objects.equals(degree, disease.degree) && Objects.equals(startDate, disease.startDate) && Objects.equals(treatment, disease.treatment);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, degree, duration, treatment);
+        return Objects.hash(id, degree, startDate, treatment);
     }
 }

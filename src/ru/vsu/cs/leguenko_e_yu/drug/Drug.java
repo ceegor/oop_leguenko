@@ -13,7 +13,7 @@ public class Drug {
     private Double price;
     private Double allergicLevel;
     private Boolean isTaken = false;
-    private static Integer expiryDays;
+    private final static Integer expiryDays;
 
     {
         System.out.println("Создано новое лекарство");

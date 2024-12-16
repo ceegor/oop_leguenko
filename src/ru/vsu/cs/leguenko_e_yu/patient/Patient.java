@@ -1,36 +1,39 @@
 package ru.vsu.cs.leguenko_e_yu.patient;
 
+import ru.vsu.cs.leguenko_e_yu.date.LocalDateHelpers;
 import ru.vsu.cs.leguenko_e_yu.disease.Disease;
 import ru.vsu.cs.leguenko_e_yu.disease.DiseaseDurationComparator;
 import ru.vsu.cs.leguenko_e_yu.drug.Drug;
 import ru.vsu.cs.leguenko_e_yu.exception.ErrorType;
 import ru.vsu.cs.leguenko_e_yu.exception.MyException;
 
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.*;
 
 public class Patient {
     private Integer id;
     private String name;
     private String surname;
-    private Integer age;
+    private final String birthday;
     private Gender gender;
     private List<Drug> allergy;
-    private static String country;
+    private final static String country;
     private List<Disease> diseases;
 
-    public Patient(Integer id, String name, String surname, Integer age, Gender gender) {
-        this(id, name, surname, age, gender, new ArrayList<>(), new ArrayList<>());
+    public Patient(Integer id, String name, String surname, String birthday, Gender gender) {
+        this(id, name, surname, birthday, gender, new ArrayList<>(), new ArrayList<>());
     }
 
-    public Patient(Integer id, String name, String surname, Integer age, Gender gender, List<Drug> allergy) {
-        this(id, name, surname, age, gender, allergy, new ArrayList<>());
+    public Patient(Integer id, String name, String surname, String birthday, Gender gender, List<Drug> allergy) {
+        this(id, name, surname, birthday, gender, allergy, new ArrayList<>());
     }
 
-    public Patient(Integer id, String name, String surname, Integer age, Gender gender, List<Drug> allergy, List<Disease> diseases) {
+    public Patient(Integer id, String name, String surname, String birthday, Gender gender, List<Drug> allergy, List<Disease> diseases) {
         this.id = id;
         this.name = name;
         this.surname = surname;
-        this.age = age;
+        this.birthday = birthday;
         this.gender = gender;
         this.allergy = allergy;
         this.diseases = diseases;
@@ -64,12 +67,8 @@ public class Patient {
         this.surname = surname;
     }
 
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
+    public String getBirthday() {
+        return birthday;
     }
 
     public Gender getGender() {
@@ -111,6 +110,10 @@ public class Patient {
         }
     }
 
+    public Period age() {
+        return Period.between(LocalDateHelpers.parseFormat(birthday), LocalDateHelpers.getCurrentDate());
+    }
+
     public void sortDiseases(DiseaseDurationComparator comparator) throws MyException {
         if (this.diseases.isEmpty()) {
             throw new MyException(ErrorType.NULL_VALUE);
@@ -124,7 +127,7 @@ public class Patient {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
-                ", age=" + age +
+                ", birthday=" + birthday +
                 ", gender=" + gender +
                 ", allergy=" + allergy +
                 ", diseases=" + diseases +
@@ -135,12 +138,12 @@ public class Patient {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Patient patient)) return false;
-        return Objects.equals(id, patient.id);
+        return Objects.equals(id, patient.id) && Objects.equals(birthday, patient.birthday);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id);
+        return Objects.hash(id, birthday);
     }
 
     public enum Gender {
