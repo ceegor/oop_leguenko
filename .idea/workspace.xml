@@ -5,19 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc3b96b9-c7c8-4013-bf1d-791eb3c9b47b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/tree_interface/tree_interface.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab1_OOP/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab1_OOP/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab1_OOP/ru/vsu/cs/leguenko_e_yu/disease/Disease.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab1_OOP/ru/vsu/cs/leguenko_e_yu/disease/Disease.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab1_OOP/ru/vsu/cs/leguenko_e_yu/disease/DiseaseDurationComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab1_OOP/ru/vsu/cs/leguenko_e_yu/disease/DiseaseDurationComparator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab1_OOP/ru/vsu/cs/leguenko_e_yu/drug/Drug.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab1_OOP/ru/vsu/cs/leguenko_e_yu/drug/Drug.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab1_OOP/ru/vsu/cs/leguenko_e_yu/exception/ErrorType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab1_OOP/ru/vsu/cs/leguenko_e_yu/exception/ErrorType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab1_OOP/ru/vsu/cs/leguenko_e_yu/patient/Patient$Gender.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab1_OOP/ru/vsu/cs/leguenko_e_yu/patient/Patient$Gender.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab1_OOP/ru/vsu/cs/leguenko_e_yu/patient/Patient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab1_OOP/ru/vsu/cs/leguenko_e_yu/patient/Patient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/vsu/cs/leguenko_e_yu/disease/Disease.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/vsu/cs/leguenko_e_yu/disease/Disease.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/vsu/cs/leguenko_e_yu/disease/DiseaseDurationComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/vsu/cs/leguenko_e_yu/disease/DiseaseDurationComparator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/vsu/cs/leguenko_e_yu/drug/Drug.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/vsu/cs/leguenko_e_yu/drug/Drug.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/vsu/cs/leguenko_e_yu/patient/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/vsu/cs/leguenko_e_yu/patient/Patient.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +18,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Exception" />
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -48,16 +38,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/IdeaProjects/oop_leguenko&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/user/IdeaProjects/Lab1_OOP/src/Main.java&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/user/IdeaProjects/TreeSamples",
+    "onboarding.tips.debug.path": "C:/Users/user/IdeaProjects/Lab1_OOP/src/Main.java"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

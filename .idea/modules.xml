@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Lab1_OOP.iml" filepath="$PROJECT_DIR$/Lab1_OOP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tree_interface/tree_interface.iml" filepath="$PROJECT_DIR$/tree_interface/tree_interface.iml" />
     </modules>
   </component>
 </project>
