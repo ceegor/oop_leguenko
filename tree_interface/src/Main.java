@@ -25,6 +25,7 @@ public class Main {
         rbtree.insert(15);
         rbtree.delete(10);
         System.out.println(rbtree.search(11));
+        rbtree.delete(14);
         AVLTree<Integer> avltree = new AVLTree<>();
 //        avltree.insert(10);
 //        avltree.insert(15);

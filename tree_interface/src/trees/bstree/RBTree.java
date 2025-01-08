@@ -327,4 +327,11 @@ public class RBTree<T extends Comparable<T>> {
             rotateRight(node.parent);
         }
     }
+
+    @Override
+    public String toString() {
+        return "RBTree{" +
+                "root=" + root +
+                '}';
+    }
 }
